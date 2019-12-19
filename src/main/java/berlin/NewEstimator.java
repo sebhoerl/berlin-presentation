@@ -22,7 +22,7 @@ public class NewEstimator implements TripEstimator {
 			List<? extends PlanElement> routedPlanElements;
 			
 			if (routedPlanElements == null) {
-				return new DefaultTripCandidate(0.0, "drt");
+				return new InvalidTripTripCandidate();
 			}
 			
 			return new DefaultRoutedTripCandidate(0.0, "drt", routedPlanElements);

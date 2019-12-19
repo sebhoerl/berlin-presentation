@@ -50,7 +50,7 @@ public class RunSimulation {
 		Quickfix.backportBerlin(config, scenario);
 		Quickfix.fixBerlinForDMC(scenario);
 
-		/*DiscreteModeChoiceConfigurator.configureAsSubtourModeChoiceReplacement(config);
+		DiscreteModeChoiceConfigurator.configureAsSubtourModeChoiceReplacement(config);
 
 		DiscreteModeChoiceConfigGroup dmcConfig = DiscreteModeChoiceConfigGroup.getOrCreate(config);
 		dmcConfig.setTourFilters(Arrays.asList("TourLengthFilter"));
@@ -58,7 +58,7 @@ public class RunSimulation {
 
 		List<String> tourConstraints = new LinkedList<>(dmcConfig.getTourConstraints());
 		tourConstraints.add(ConstraintModule.FROM_TRIP_BASED);
-		dmcConfig.setTourConstraints(tourConstraints);*/
+		dmcConfig.setTourConstraints(tourConstraints);
 		
 		{ // Configure AV
 			config.planCalcScore().addModeParams(new ModeParams("av"));
